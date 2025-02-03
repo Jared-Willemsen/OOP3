@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.Controller">
+    <padding>
+        <Insets right="10.0" />
+    </padding>
+    <MediaView fx:id="mediaViewLeft" fitHeight="300.0" fitWidth="500.0" layoutX="35.0" layoutY="280.0" />
+    <Button layoutX="31.0" layoutY="603.0" mnemonicParsing="false" onAction="#playSelectedWebcamLeft" text="PLAY" />
+    <Button layoutX="483.0" layoutY="603.0" mnemonicParsing="false" onAction="#pauseSelectedWebcamLeft" text="PAUSE" />
+    <ComboBox fx:id="webcamDropdownLeft" layoutX="210.0" layoutY="603.0" onAction="#startSelectedWebcamLeft" prefWidth="150.0" />
+    <Label fx:id="webcamLabelLeft" alignment="CENTER" layoutX="197.0" layoutY="197.0" text="Webcam1" textAlignment="CENTER">
+        <font>
+            <Font size="40.0" />
+        </font>
+    </Label>
+
+    <MediaView fx:id="mediaViewRight" fitHeight="300.0" fitWidth="500.0" layoutX="657.0" layoutY="276.0" />
+    <Button layoutX="653.0" layoutY="603.0" mnemonicParsing="false" onAction="#playSelectedWebcamRight" text="PLAY" />
+    <Button layoutX="1105.0" layoutY="603.0" mnemonicParsing="false" onAction="#pauseSelectedWebcamRight" text="PAUSE" />
+    <ComboBox fx:id="webcamDropdownRight" layoutX="832.0" layoutY="603.0" onAction="#startSelectedWebcamRight" prefWidth="150.0" />
+    <Label fx:id="webcamLabelRight" contentDisplay="CENTER" layoutX="819.0" layoutY="197.0" text="Webcam2" textAlignment="CENTER">
+        <font>
+            <Font size="40.0" />
+        </font>
+    </Label>
+    <Label fx:id="webcamLabelLeft1" contentDisplay="CENTER" layoutX="346.0" layoutY="14.0" text="Distance between webcams:" textAlignment="CENTER">
+        <font>
+            <Font size="40.0" />
+        </font>
+    </Label>
+    <Label fx:id="distanceLabel" layoutX="545.0" layoutY="72.0" text="None" textAlignment="CENTER">
+        <font>
+            <Font size="40.0" />
+        </font>
+    </Label>
+    <TextField fx:id="textFieldLeft" layoutX="211.0" layoutY="634.0" onAction="#filterWebcamsLeft"/>
+    <TextField fx:id="textFieldRight" layoutX="833.0" layoutY="634.0" />
+</AnchorPane>
